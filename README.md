@@ -1,4 +1,5 @@
-#CoreProjectGenerator
+# CoreProjectGenerator
+
 Cli tool to automate the process of creating default files and folders made in my projects.
 
 Currently it only generates the code of a specific template (https://github.com/luizanac/DefaultProject), if you want to use it, perform the following steps.
