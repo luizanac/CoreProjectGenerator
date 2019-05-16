@@ -6,7 +6,7 @@ Currently it only generates the code of a specific template (https://github.com/
 
  1. git clone https://github.com/luizanac/CoreProjectGenerator.git
  2. cd CoreProjectGenerator
- 3. dotnet public -c Release -r {your os} [(See RID)](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog)
+ 3. dotnet publish -c Release -r {your os} [(See RID)](https://docs.microsoft.com/en-us/dotnet/core/rid-catalog)
  4. enter in publish folder
  5. use the executable
 
