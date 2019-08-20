@@ -16,7 +16,7 @@ namespace CoreProjectGenerator
         private static string AbsoluteProjectPath => $"{_destinyFolder}\\{_projectName}";
         private static string ZipProjectName => "master.zip";
         private static string UnzipedProjectName => "default-master";
-        private static string DefaultProjectName => "SigUbi";
+        private static string DefaultProjectName = "SigUbi";
 
         public static void Main(string[] args)
         {
@@ -27,11 +27,13 @@ namespace CoreProjectGenerator
                 cfg.Description = "--[projectName] --[destinyFolder]";
                 var name = cfg.Option("--name", "Project name without spaces", CommandOptionType.SingleValue);
                 var path = cfg.Option("--path", "Absolute path to generate application", CommandOptionType.SingleValue);
+				var oldName = cfg.Option("--oldName", "The name of template project", CommandOptionType.SingleValue);
 
                 cfg.OnExecute(() =>
                 {
                     _projectName = name.Value();
                     _destinyFolder = path.Value();
+					DefaultProjectName = oldName.Value();
                     return GenerateProject(app);
                 });
             });
